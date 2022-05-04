@@ -4,6 +4,11 @@ A web application that generates a random restaurant recommendation given a loca
 Wanna go out and grab a bite but can never decide where? This application is perfect for you. Enter your location, the type of food your feeling (or nothing if you don't know!), how far you're willing to travel (radius), and let's play a game of Restaurant Roulette. Happy food hunting.
 
 # Usage
+Requires Node.js to be installed. 
+
+In terminal, run `node index.js` in the main `/restaurant-roulette` directory. Then open up your browser and go to `localhost:3000`.
+Make sure all dependencies are installed.
+
 You must enter a location (address, city, country) and radius (km). Food category is optional.
 
 Note: Usage constraints largely revolve around the available data Google Maps and Yelp have for restaurants. Certain locations will be signficantly less serviced. 
