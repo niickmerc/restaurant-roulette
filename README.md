@@ -6,7 +6,7 @@ Wanna go out and grab a bite but can never decide where? This application is per
 # Usage
 You must enter a location (address, city) and radius (km). Food category is optional.
 
-Note: Usage constraints largely revolve around the data Google Maps and Yelp have for restaurants. Certain countries will be signficantly less serviced. 
+Note: Usage constraints largely revolve around the data Google Maps and Yelp have for restaurants. Certain locations will be signficantly less serviced. 
 
 ![Alt text](/img/demo.png "Demo")
 
