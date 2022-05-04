@@ -7,7 +7,6 @@ const ejs = require('ejs');
 const { resourceUsage } = require('process');
 const favicon = require('serve-favicon');
 
-
 const apiKey = '6xRLOT2hzxA37NUpkb0rsyv92fqMhNv8O_c-2_PC04Ryt--xS5xQUQru2A8orO8EojnhSO5mjsUyFUvGFr0MSosv6b4FDMItXK60QMwRmqb7U4yMZ4M_Et_NOTU_YnYx';
 const clientId = 'k0nxX4jW8f0f45dVAD5_tQ';
 
@@ -77,13 +76,10 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static('public')); 
 app.use(express.urlencoded({extended : true})); // parses html form and translate into JS object
 
-
-
 // GET requests:
 app.get("/", handleHome);
 
 // POST requests:
-
 app.post("/", handleSearch);
 
 // -----------------------------------------------------
