@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-roulette",
+  "version": "1.0.0",
+  "description": "Web application that generates a random restaurant recommendation given a location, specified radius and food-category, using the Yelp-Fusion API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan L.",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "colors": "^1.4.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "yelp-fusion": "^3.0.0"
+  }
+}

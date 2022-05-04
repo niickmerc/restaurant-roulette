@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bulma.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Merriweather:wght@300;400;900&family=PT+Serif&family=Playfair+Display:wght@500&family=Shippori+Antique+B1&display=swap"
+        rel="stylesheet">
+
+    <!-- JS -->
+    <script src="/js/app.js"></script>
+
+    <title>Restaurant Roulette</title>
+</head>
+<body>
+    <div class="container mt-5" id="searchContainer">
+        <form method="POST" class="box" id="searchForm">
+            <div class="field">
+                <label class="label title is-1 has-text-centered" id="mainHeading">Restaurant Roulette</label>
+                <label class="label subtitle is-5 has-text-centered" id="subHeading">Find a random restaurant near you.</label>
+
+                <div class="control">
+                    <input class="input is-rounded" type="text" id="locationQuery" name="location" placeholder="Location">
+                </div>
+                <div class="control mt-3">
+                    <input class="input is-rounded" type="text" id="termQuery" name="terms" placeholder="Category">
+                </div>
+                <div class="control mt-3">
+                    <input class="input is-rounded" type="text" id="radiusQuery" name="radius" placeholder="Distance (km)">
+                </div>
+            </div>
+            <button class="button is-danger is-rounded" value="Search" type="submit">I'm Feeling Hungry</button>
+        </form>
+    </div>
+
+    <% if (noResult) { %>
+        <div class="container my-5" id="noResultsMessageBox"> 
+            <h1>Sorry! We couldn't find anything with the given parameters.</h1>
+        </div>
+    <% } %>
+
+    <% if (showResult) { %>
+        <div class="container my-5" id="queryBox"> 
+            <div class="box" id="queriedContainer">
+                <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-5by3">
+                        <img src="<%= image %> " alt="Placeholder image">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                          <p class="title is-4" id="displayTitleRatingPricing"><%= name %> </p>
+                          <p class="subtitle is-6" id="displayAddress"><%= name %> · <%= starRating %> · <%= price %></p>
+                          <p>Google Maps:</p>
+                          <a href="<%= restaurantURL %> "><%= address %> </p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    <% } %>
+    
+    
+</body>
+</html>
