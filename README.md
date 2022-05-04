@@ -1,5 +1,5 @@
 # Welcome to Restaurant Roulette
- A web application that generates a random restaurant recommendation given a location, specified radius and food-category.
+A web application that generates a random restaurant recommendation given a location, specified radius and food-category.
  
 Wanna go out and grab a bite but can never decide where? This application is perfect for you. Enter your location, the type of food your feeling (or nothing if you don't know!), how far you're willing to travel (radius), and let's play a game of Restaurant Roulette. Happy food hunting.
 
