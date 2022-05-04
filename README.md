@@ -10,6 +10,7 @@ Note: Usage constraints largely revolve around the available data Google Maps an
 
 ![Alt text](/img/demo.png "Demo")
 
-BCSHacks 2022 Team name: Last Minute
-Members: Chris, Bryan, Nick, Taylor, Anmol
+**BCSHacks 2022 **
+**Team name**: Last Minute
+**Members**: _Chris, Bryan, Nick, Taylor, Anmol_
 
