@@ -25,7 +25,7 @@ const handleSearch = async (req, res) => {
         radius: parseInt(radius)*1000, 
         open_now: true,
         categories: "restaurants, All",
-        limit: 5
+        limit: 10
       };
 
     try {
