@@ -4,8 +4,6 @@ const path = require('path');
 const yelp = require('yelp-fusion');
 const colors = require('colors');
 const ejs = require('ejs');
-const { resourceUsage } = require('process');
-const favicon = require('serve-favicon');
 
 const apiKey = '6xRLOT2hzxA37NUpkb0rsyv92fqMhNv8O_c-2_PC04Ryt--xS5xQUQru2A8orO8EojnhSO5mjsUyFUvGFr0MSosv6b4FDMItXK60QMwRmqb7U4yMZ4M_Et_NOTU_YnYx';
 const clientId = 'k0nxX4jW8f0f45dVAD5_tQ';
@@ -56,8 +54,6 @@ app.get("/", handleHome);
 
 // POST requests:
 app.post("/", handleSearch);
-
-
 
 // -----------------------------------------------------
 // FUNCTIONS:
