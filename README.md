@@ -17,7 +17,7 @@ Note: Usage constraints largely revolve around the available data Google Maps an
 
 
 
-**Team name**: Last Minute
+**Team name**: _Last Minute_
 
 **Members**: _Chris, Bryan, Nick, Taylor, Anmol_
 
