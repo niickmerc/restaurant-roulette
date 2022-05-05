@@ -30,13 +30,22 @@
                 <label class="label subtitle is-5 has-text-centered" id="subHeading">Find a random restaurant near you.</label>
 
                 <div class="control">
-                    <input class="input is-rounded" type="text" id="locationQuery" name="location" placeholder="Location">
+                    <input class="input is-rounded" type="text" id="locationQuery" name="location" placeholder="Location" 
+                    <% if (locationQuery) { %>
+                        value="<%= locationQuery %>"
+                    <% } %>>
                 </div>
                 <div class="control mt-3">
-                    <input class="input is-rounded" type="text" id="termQuery" name="terms" placeholder="Category">
+                    <input class="input is-rounded" type="text" id="termQuery" name="terms" placeholder="Category" 
+                    <% if (termQuery) { %>
+                        value="<%= termQuery %>"
+                    <% } %>>
                 </div>
                 <div class="control mt-3">
-                    <input class="input is-rounded" type="text" id="radiusQuery" name="radius" placeholder="Distance (km)">
+                    <input class="input is-rounded" type="text" id="radiusQuery" name="radius" placeholder="Distance (km)" 
+                    <% if (radiusQuery) { %>
+                        value="<%= radiusQuery %>"
+                    <% } %>>
                 </div>
             </div>
             <button class="button is-danger is-rounded" value="Search" type="submit">I'm Feeling Hungry</button>
