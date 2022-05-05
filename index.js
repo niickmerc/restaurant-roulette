@@ -67,7 +67,9 @@ function genGoogleLink(x, y, place) {
     return link;
 }
 
-
+// makeRequest
+// @signature searchRequest-obj response-obj => void
+// EFFECTS: Makes an API request given a searchRequest object and renders response.
 async function makeRequest(searchRequest, res) {
     const client = yelp.client(apiKey);
     const response = await client.search(searchRequest);
@@ -92,6 +94,7 @@ async function makeRequest(searchRequest, res) {
     console.log(rating);
     const starRating = "⭐".repeat(parseInt(rating));
     console.log(starRating);
+    
     res.render('home', {
         showResult: true, noResult: false,
         name, image, address, price, restaurantURL, starRating
