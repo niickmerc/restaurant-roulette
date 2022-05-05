@@ -26,9 +26,10 @@
     <div class="container mt-5" id="searchContainer">
         <form method="POST" class="box" id="searchForm">
             <div class="field">
+
+                <div class="is-flex is-justify-content-center"><img src="/img/restaurant.png" alt="icon" width="60" height="60"></div>
                 <label class="label title is-1 has-text-centered" id="mainHeading">Restaurant Roulette</label>
                 <label class="label subtitle is-5 has-text-centered" id="subHeading">Find a random restaurant near you.</label>
-
                 <div class="control">
                     <input class="input is-rounded" type="text" id="locationQuery" name="location" placeholder="Location" 
                     <% if (locationQuery) { %>
@@ -48,13 +49,18 @@
                     <% } %>>
                 </div>
             </div>
-            <button class="button is-danger is-rounded" value="Search" type="submit">I'm Feeling Hungry</button>
+            <div class="is-flex is-justify-content-left">
+                <button class="button is-danger is-rounded" value="Search" type="submit">I'm Feeling Hungry</button>
+            </div>
+            
         </form>
     </div>
 
     <% if (noResult) { %>
-        <div class="container my-5" id="noResultsMessageBox"> 
-            <h1>Sorry! We couldn't find anything with the given parameters.</h1>
+        <div class="container my-5 is-flex is-justify-content-center" id="noResultsMessageBox"> 
+            <div class="box">
+                <h1>Sorry! We couldn't find anything with the given parameters.</h1>
+            </div>
         </div>
     <% } %>
 
