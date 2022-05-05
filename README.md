@@ -9,7 +9,7 @@ Requires Node.js to be installed.
 In terminal, run `node index.js` in the main `/restaurant-roulette` directory. Then open up your browser and go to `localhost:3000`.
 Make sure all dependencies are installed.
 
-You must enter a location (address, city, country) and radius (km). Food category is optional.
+You must enter a location (address, city, country). Radius (km) and food category are optional.
 
 Note: Usage constraints largely revolve around the available data Google Maps and Yelp have for restaurants. Certain locations will be signficantly less serviced. 
 
