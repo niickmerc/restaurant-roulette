@@ -10,7 +10,7 @@ Wanna go out and grab a bite but can never decide where? This application is per
 # Usage
 Requires Node.js to be installed. 
 
-In terminal, run `node index.js` in the main `/restaurant-roulette` directory. Then open up your browser and go to `localhost:3000`.
+In terminal, run `node index.js` in the main `/restaurant-roulette-main` directory. Then open up your browser and go to `localhost:3000`.
 Make sure all dependencies are installed.
 
 You must enter a location (address, city, country). Radius (km) and food category are optional.
