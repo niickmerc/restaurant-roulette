@@ -27,40 +27,33 @@ const handleSearch = async (req, res) => {
       };
 
     try {
-    const client = yelp.client(apiKey);
-    const response = await client.search(searchRequest);
-    const count = Object.keys(response.jsonBody.businesses).length;
-    const randomResult = Math.floor(Math.random() * count);
-    const result = await response.jsonBody.businesses[randomResult];
+        const client = yelp.client(apiKey);
+        const response = await client.search(searchRequest);
+        const count = Object.keys(response.jsonBody.businesses).length;
+        const randomResult = Math.floor(Math.random() * count);
+        const result = await response.jsonBody.businesses[randomResult];
 
-    const restaurantURL = await genGoogleLink(result.coordinates.latitude, result.coordinates.longitude, result.name);
-    const name = (result.name);
-    const image = (result.image_url);
-    const rating = (result.rating);
-    const price = (result.price);
-    const location_array = result.location.display_address;
-    let address = "";
-    for (let i = 0; i < (location_array.length - 1); i++) {
-        address += location_array[i] + " ";
-    }
-    console.log(name);
-    console.log(address);
-    console.log(price);
-    console.log(restaurantURL);
-    console.log(rating);
-    const starRating = "⭐".repeat(parseInt(rating));
-    console.log(starRating);
-
-    res.render('home', {
-        showResult: true, noResult: false,
-        name, image, address, price, restaurantURL, starRating,
-        locationQuery: location, termQuery: terms, radiusQuery: radius});
-    console.log("Restaurant located!".cyan);
-    } catch (e) {
-        res.render('home', {showResult: false, noResult: true,
+        const restaurantURL = await genGoogleLink(result.coordinates.latitude, result.coordinates.longitude, result.name);
+        const name = (result.name);
+        const image = (result.image_url);
+        const rating = (result.rating);
+        const price = (result.price);
+        const location_array = result.location.display_address;
+        let address = "";
+        for (let i = 0; i < (location_array.length - 1); i++) {
+            address += location_array[i] + " ";
+        }
+        const starRating = "⭐".repeat(parseInt(rating));
+        res.render('home', {
+            showResult: true, noResult: false,
+            name, image, address, price, restaurantURL, starRating,
             locationQuery: location, termQuery: terms, radiusQuery: radius});
-        console.log("No restaurants found with given parameters.".yellow);
-    }
+        console.log("Restaurant located!".cyan);
+        } catch (e) {
+            res.render('home', {showResult: false, noResult: true,
+                locationQuery: location, termQuery: terms, radiusQuery: radius});
+            console.log("No restaurants found with given parameters.".yellow);
+        }
 }
 
 // -----------------------------------------------------
@@ -84,8 +77,6 @@ app.get("/", handleHome);
 // POST requests:
 app.post("/", handleSearch);
 
-// -----------------------------------------------------
-// FUNCTIONS:
 // genGoogleLink
 // @signature: int int => str
 // EFFECTS: Returns Google-Maps link to given place.
@@ -94,10 +85,3 @@ function genGoogleLink(x, y, place) {
     link = link + String(x) + "%2C" + String(y) + "%2C+" + String(place);
     return link;
 }
-
-// makeRequest
-// @signature searchRequest-obj response-obj => void
-// EFFECTS: Makes an API request given a searchRequest object and renders response.
-// async function makeRequest(searchRequest, res) {
-    
-// }
